@@ -7,7 +7,45 @@ components:
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: grid_panel_1
+    properties: {}
+    type: GridPanel
+    layout_properties: {grid_position: 'XEYNPA,WIXFVV'}
+    components:
+    - name: label_1
+      properties: {text: 'Nhập vào mảng số nguyên cách nhau bởi dấu "," (1,2,3,5,4,6)',
+        bold: true, font_size: 16}
+      type: Label
+      layout_properties: {row: VECCCB, width_xs: 6, col_xs: 2}
+    - name: text_box_input_sort
+      properties: {text: '', placeholder: '1,2,3,4,...'}
+      type: TextBox
+      layout_properties: {row: JGSGDW, width_xs: 7, col_xs: 2}
+      event_bindings: {change: text_box_input_sort_change}
+    - name: drop_down_sort
+      properties: {}
+      type: DropDown
+      layout_properties: {row: XQVGCA, width_xs: 4, col_xs: 2}
+      event_bindings: {change: drop_down_sort_change, show: drop_down_sort_show}
+    - name: button_sort
+      properties: {text: Sort, bold: true, role: filled-button}
+      type: Button
+      layout_properties: {row: XQVGCA, width_xs: 3, col_xs: 6}
+      event_bindings: {click: button_sort_click}
+    - name: label_result
+      properties: {text: 'Kết quả : ', font_size: 18, bold: true}
+      type: Label
+      layout_properties: {row: LBZUEG, width_xs: 7, col_xs: 2}
+    - name: label_2
+      properties: {text: 'Số bước thực hiện thứ tự từ trái sang phải :', bold: true,
+        font_size: 16}
+      type: Label
+      layout_properties: {row: UAUUAH, width_xs: 5, col_xs: 2}
+    - name: label_step
+      properties: {bold: true, font_size: 15}
+      type: Label
+      layout_properties: {row: DSGVMW, width_xs: 6, col_xs: 2}
 - type: FlowPanel
   properties: {}
   name: navbar_links
